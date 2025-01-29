@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@plasmohq/messaging": "^0.6.2",
     "lucide-react": "^0.474.0",
     "plasmo": "0.89.4",
     "react": "18.2.0",
@@ -31,7 +32,8 @@
   "manifest": {
     "host_permissions": [
       "https://www.linkedin.com/*",
-      "https://www.instagram.com/*"
+      "https://www.instagram.com/*",
+      "https://dashboard-azure-one.vercel.app/*"
     ],
     "permissions": [
       "scripting",

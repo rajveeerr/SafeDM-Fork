@@ -21,6 +21,14 @@ const userSchema = new mongoose.Schema({
   screenshots: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Screenshot' }],
 }, { timestamps: true });
 
+userSchema.pre('save', function(next) {
+  if (!this.profilePicture) {
+      const randomNumber = Math.floor(Math.random() * 50);
+      this.randomProfileImage = `https://avatar.iran.liara.run/public/?${randomNumber}`;
+  }
+  next();
+});
+
 const User = mongoose.model('User', userSchema);
 
 module.exports = {
