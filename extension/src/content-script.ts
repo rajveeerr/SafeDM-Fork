@@ -5,6 +5,7 @@ if (window.location.hostname === `http://${host}/auth/sign-in?source=extension`)
         action: "authenticated", 
         token 
       });
+      console.log(token);
       window.close();
     }
   }

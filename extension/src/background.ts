@@ -1,4 +1,4 @@
-const host = "localhost:3000"
+const host = "dashboard-azure-one.vercel.app"
 
 chrome.runtime.onInstalled.addListener(() => {
     console.log("Anti-Harassment Extension Installed");
