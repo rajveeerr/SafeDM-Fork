@@ -134,11 +134,11 @@ const hideAbusiveMessagesPreview = () => {
 }
 
 const hideAbusiveMessagesPreviewInPopup = () => {
-  console.log("here in popup");
+  // console.log("here in popup");
   const chatPreviews = document.querySelectorAll(
     ".msg-overlay-list-bubble__message-snippet-container--narrow-two-line"
   );
-  console.log(chatPreviews);
+  // console.log(chatPreviews);
 
   chatPreviews.forEach((preview) => {
     const message = preview.innerHTML || "";
@@ -195,20 +195,69 @@ const toggleMessages = () => {
   }
 }
 
-const hideAbusiveMessagesInbox = () => {
+const hideAbusiveMessagesInbox = async () => {
   const chatPreviews = document.querySelectorAll(
-    ".msg-s-event-listitem__body"
+    ".msg-s-event-listitem__body:not(.message-processed)"
   );
 
-  chatPreviews.forEach((preview) => {
-    if (preview.classList.contains('message-processed')) {
-      return;
-    }
-
+  chatPreviews.forEach(async (preview) => {
     const message = preview.innerHTML || "";
     const cleanedMessage = cleanMessage(message);
 
     if (detectHarassment(cleanedMessage)) {
+      // Navigate up to the main message container
+      const mainContainer = preview.closest('.msg-s-event-listitem');
+      if (!mainContainer) return;
+
+      // Extract metadata from the message group meta section
+      const metaDiv = mainContainer.querySelector('.msg-s-message-group__meta');
+      if (!metaDiv) return;
+
+      // 1. Get Profile URL
+      const profileLink = metaDiv.querySelector('a[data-test-app-aware-link]');
+      const profileUrl = profileLink?.href || 'URL not found';
+
+      // 2. Get Name
+      const nameElement = metaDiv.querySelector('.msg-s-message-group__name');
+      const name = nameElement?.textContent?.trim() || 'Name not found';
+
+      // 3. Get Time
+      const timeElement = metaDiv.querySelector('.msg-s-message-group__timestamp');
+      const time = timeElement?.textContent?.trim() || 'Time not found';
+
+      // Message content
+      const messageContent = cleanedMessage;
+
+      // Final data object
+      const messageData = {
+        profileUrl,
+        userName : name,
+        timeOfMessage: time,
+        messageContent,
+        platform : "linkedIn"
+      };
+
+      console.log("Harassment detected:", messageData);
+
+      try {
+        const response = await fetch('http://localhost:3000/api/v1/user/hide-message', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(messageData)
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log('API response:', result);
+      } catch (error) {
+        console.error('Error reporting harassment:', error);
+      }
+
       const messageContainer = preview as HTMLElement;
       if (messageContainer) {
         messageContainer.classList.add('message-processed');
@@ -220,7 +269,7 @@ const hideAbusiveMessagesInbox = () => {
         messageContainer.textContent = '';
         messageContainer.appendChild(warningContent);
         messageContainer.style.border = "3px dashed red";
-      }
+      } 
     }
   });
 }
@@ -359,9 +408,12 @@ const checkForHarassmentMessages = () => {
 }
 
 
+let isProcessing = false;
 
 const observeMutations = () => {
   const observer = new MutationObserver(() => {
+    if (isProcessing) return;
+    isProcessing = true;
     const hasHarassmentMessage = checkForHarassmentMessages();
     hideAbusiveMessagesPreviewInPopup()
     hideAbusiveMessagesPreview()
@@ -371,6 +423,9 @@ const observeMutations = () => {
     if (hasHarassmentMessage) {
       injectShowButton()
     }
+    requestAnimationFrame(() => {
+      isProcessing = false;
+    });
   })
 
   observer.observe(document.body, {
