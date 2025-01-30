@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import image from '../../assets/image.png'
 
 const VidOverlay = () => {
   const videoRef = useRef(null);
@@ -15,13 +16,14 @@ const VidOverlay = () => {
     <div className="relative w-full h-screen mt-[-200px]">
       <div className="absolute bottom-0 left-0 right-0 z-0 bg-black bg-opacity-50 flex justify-center items-center pointer-events-auto">
         {/* Video element */}
-        <video
-          ref={videoRef}
+        <img
+          // ref={videoRef}
           className="w-full max-w-[1200px] rounded-lg shadow-lg"
-          onClick={handlePlay} // Allow video to play on click
-        >
-          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-        </video>
+          src={image}
+          // onClick={handlePlay} // Allow video to play on click
+        />
+          
+       
 
         {/* Custom Play Button */}
         {!isPlaying && (

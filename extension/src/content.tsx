@@ -7,7 +7,9 @@ const abusiveWords = [
   "ugly",
   "idiot",
   "bitch",
-  "fuck off"
+  "fuck off",
+  "marry",
+  "single",
 ]
 
 export const config: PlasmoCSConfig = {
