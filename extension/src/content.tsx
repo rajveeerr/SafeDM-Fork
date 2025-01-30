@@ -134,11 +134,11 @@ const hideAbusiveMessagesPreview = () => {
 }
 
 const hideAbusiveMessagesPreviewInPopup = () => {
-  console.log("here in popup");
+  // console.log("here in popup");
   const chatPreviews = document.querySelectorAll(
     ".msg-overlay-list-bubble__message-snippet-container--narrow-two-line"
   );
-  console.log(chatPreviews);
+  // console.log(chatPreviews);
 
   chatPreviews.forEach((preview) => {
     const message = preview.innerHTML || "";
@@ -195,20 +195,58 @@ const toggleMessages = () => {
   }
 }
 
-const hideAbusiveMessagesInbox = () => {
+const hideAbusiveMessagesInbox = async () => {
   const chatPreviews = document.querySelectorAll(
-    ".msg-s-event-listitem__body"
+    ".msg-s-event-listitem__body:not(.message-processed)"
   );
 
-  chatPreviews.forEach((preview) => {
-    if (preview.classList.contains('message-processed')) {
-      return;
-    }
+  const { authToken } = await new Promise<{ authToken?: string }>((resolve) => {
+    chrome.storage.local.get(['authToken'], resolve);
+  });
 
+  // Track if we've added the login prompt
+  let loginPromptAdded = false;
+
+  chatPreviews.forEach(async (preview) => {
     const message = preview.innerHTML || "";
     const cleanedMessage = cleanMessage(message);
 
     if (detectHarassment(cleanedMessage)) {
+      // Navigate up to the main message container
+      const mainContainer = preview.closest('.msg-s-event-listitem');
+      if (!mainContainer) return;
+
+      // Extract metadata from the message group meta section
+      const metaDiv = mainContainer.querySelector('.msg-s-message-group__meta');
+      if (!metaDiv) return;
+
+      // 1. Get Profile URL
+      const profileLink = metaDiv.querySelector('a[data-test-app-aware-link]');
+      const profileUrl = profileLink?.href || 'URL not found';
+
+      // 2. Get Name
+      const nameElement = metaDiv.querySelector('.msg-s-message-group__name');
+      const name = nameElement?.textContent?.trim() || 'Name not found';
+
+      // 3. Get Time
+      const timeElement = metaDiv.querySelector('.msg-s-message-group__timestamp');
+      const time = timeElement?.textContent?.trim() || 'Time not found';
+
+      // Message content
+      const messageContent = cleanedMessage;
+
+      // Final data object
+      const messageData = {
+        profileUrl,
+        userName: name,
+        timeOfMessage: time,
+        messageContent,
+        platform: "linkedIn"
+      };
+
+      console.log("Harassment detected:", messageData);
+
+
       const messageContainer = preview as HTMLElement;
       if (messageContainer) {
         messageContainer.classList.add('message-processed');
@@ -220,6 +258,75 @@ const hideAbusiveMessagesInbox = () => {
         messageContainer.textContent = '';
         messageContainer.appendChild(warningContent);
         messageContainer.style.border = "3px dashed red";
+
+
+        if (authToken) {
+          // Existing API call code
+          try {
+            const response = await fetch('http://localhost:3000/api/v1/user/hide-message', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${authToken}`,
+              },
+              body: JSON.stringify({
+                profileUrl,
+                userName: name,
+                timeOfMessage: time,
+                messageContent: cleanedMessage,
+                platform: "linkedIn"
+              })
+            });
+
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const result = await response.json();
+            console.log('API response:', result);
+          } catch (error) {
+            console.error('Error reporting harassment:', error);
+          }
+        } else if (!loginPromptAdded) {
+          // Add login prompt once
+          const bottomElement = document.querySelector('.msg-s-message-list__bottom-of-list');
+          if (bottomElement) {
+            const existingPrompt = bottomElement.querySelector('#login-prompt');
+            if (!existingPrompt) {
+              const loginPrompt = document.createElement('div');
+              loginPrompt.id = 'login-prompt';
+              loginPrompt.innerHTML = `
+              <div style="
+                display: flex; 
+                align-items: center; 
+                gap: 8px; 
+                padding: 8px 12px; 
+                background: rgba(34, 197, 94, 0.1); /* Light green background */
+                border-radius: 6px; 
+                font-size: 14px;
+              ">
+                <span style="color: #22c55e; flex: 1;">
+                  Want to save your messages? 
+                </span>
+                <a href="YOUR_LOGIN_URL" style="
+                  color: #fff; 
+                  background: #22c55e; /* Green button */
+                  padding: 4px 10px; 
+                  border-radius: 4px; 
+                  text-decoration: none;
+                  font-weight: bold;
+                  transition: background 0.3s ease;
+                " 
+                onmouseover="this.style.background='#16a34a'"
+                onmouseout="this.style.background='#22c55e'">
+                  Login
+                </a>
+              </div>
+            `;
+            
+
+              bottomElement.appendChild(loginPrompt);
+            }
+            loginPromptAdded = true;
+          }
+        }
       }
     }
   });
@@ -359,9 +466,12 @@ const checkForHarassmentMessages = () => {
 }
 
 
+let isProcessing = false;
 
 const observeMutations = () => {
   const observer = new MutationObserver(() => {
+    if (isProcessing) return;
+    isProcessing = true;
     const hasHarassmentMessage = checkForHarassmentMessages();
     hideAbusiveMessagesPreviewInPopup()
     hideAbusiveMessagesPreview()
@@ -371,6 +481,9 @@ const observeMutations = () => {
     if (hasHarassmentMessage) {
       injectShowButton()
     }
+    requestAnimationFrame(() => {
+      isProcessing = false;
+    });
   })
 
   observer.observe(document.body, {
