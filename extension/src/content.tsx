@@ -270,7 +270,7 @@ const hideAbusiveMessagesInbox = async () => {
 
           console.log("auth token", cleanedAuthToken)
           try {
-            const response = await fetch('http://localhost:3000/api/v1/user/hide-message', {
+            const response = await fetch('https://harassment-saver-extension.onrender.com/api/v1/user/hide-message', {
               method: 'POST',
               headers: {
                 'Authorization': `Bearer ${cleanedAuthToken.trim()}`,

@@ -35,7 +35,7 @@
     "host_permissions": [
       "https://www.linkedin.com/*",
       "https://www.instagram.com/*",
-      "https://dashboard-azure-one.vercel.app/*"
+      "http://localhost:3000/*"
     ],
     "permissions": [
       "scripting",
