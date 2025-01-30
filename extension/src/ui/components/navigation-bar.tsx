@@ -1,5 +1,6 @@
 import React from 'react';
 import { Home, BarChart2, List, Settings2 } from 'lucide-react';
+import { useNavigation } from '../popupui';
 
 const navigationItems = [
     { id: 'home', icon: Home, label: 'Home' },
@@ -8,7 +9,9 @@ const navigationItems = [
     { id: 'settings', icon: Settings2, label: 'Settings' }
 ];
 
-const NavigationBar = ({ currentPage, setCurrentPage }) => {
+const NavigationBar = () => {
+    const { currentPage, setCurrentPage } = useNavigation();
+
     return (
         <div className="plasmo-fixed plasmo-bottom-0 plasmo-left-0 plasmo-right-0 plasmo-border-t plasmo-border-gray-800 plasmo-bg-gray-900 plasmo-p-2">
             <div className="plasmo-flex plasmo-justify-around">
@@ -27,6 +30,5 @@ const NavigationBar = ({ currentPage, setCurrentPage }) => {
         </div>
     );
 };
-
 
 export default NavigationBar;
