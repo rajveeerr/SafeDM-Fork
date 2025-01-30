@@ -10,7 +10,7 @@ const Hero = () => {
 
                 <div className="absolute inset-0 flex flex-col mt-[-100px]  justify-center items-center z-5 text-center pointer-events-none">
                     <h1 className="md:text-7xl sd:text-5xl text-2xl py-7 text-white font-bold md:py-7">
-                        Stay Safe Online, Hassle-Free.
+                        Stay Safe Online, <span className='text-purple-700'>Hassle-Free.</span>
                     </h1>
                     <div className="flex justify-center items-center">
                         <p className="md:text-2xl sd:text-2xl font-URW text-xl font-bold text-transparent bg-gradient-to-r from-purple-600 via-white to-purple-600 bg-clip-text">

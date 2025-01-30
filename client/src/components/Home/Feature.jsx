@@ -167,16 +167,16 @@ const Feature = () => {
         <div className="w-full bg-[#24252d] border border-purple-900 shadow-lg flex flex-col rounded-xl my-4 p-6 hover:scale-105 duration-300 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-purple-400"></div>
           <img
-            className="w-16 h-16 mx-auto mt-2 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 p-3"
+            className="w-26 h-26 mx-auto mt-10 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 p-3"
             src={Single}
             alt="/"
           />
-          <h2 className="text-2xl font-bold text-white text-center py-6">Invisible DM Filtering</h2>
+          <h2 className="text-2xl font-bold text-white text-center mt-6">Evidence Generation</h2>
           <div className="text-center font-medium text-gray-400">
             <p className="py-3 mx-8 border-b border-gray-700 mt-8">
-              Hides harassing messages while keeping evidence safe.
+              Automatically generates reports for authorities. Ensures legal-grade documentation of incidents.
             </p>
-            <p className="py-3 mx-8 border-b border-gray-700">Keeps you stress-free by filtering harmful content.</p>
+          
           </div>
           <button className="bg-gradient-to-r from-purple-600 to-purple-400 mx-auto w-[200px] px-6 py-3 my-6 rounded-lg text-white font-semibold hover:opacity-90 transition-all">
             Learn More
@@ -190,14 +190,14 @@ const Feature = () => {
             Popular
           </div>
           <img
-            className="w-16 h-16 mx-auto mt-2 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 p-3"
+            className="w-26 h-26 mx-auto mt-10 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 p-3"
             src={Double}
             alt="/"
           />
-          <h2 className="text-2xl font-bold text-white text-center py-6">Evidence Generation</h2>
+          <h2 className="text-2xl font-bold text-white text-center mt-6">Invisible DM Filtering</h2>
           <div className="text-center font-medium text-gray-300">
-            <p className="py-3 mx-8 border-b border-gray-700/50 mt-8">Automatically generates reports for authorities.</p>
-            <p className="py-3 mx-8 border-b border-gray-700/50">Ensures legal-grade documentation of incidents.</p>
+            <p className="py-3 mx-8 border-b border-gray-700/50 mt-8">Hides harassing messages while keeping evidence safe. Keeps you stress-free by filtering harmful content.</p>
+        
           </div>
           <button className="bg-gradient-to-r from-purple-600 to-purple-400 mx-auto w-[200px] px-6 py-3 my-6 rounded-lg text-white font-semibold hover:opacity-90 transition-all">
             Learn More
@@ -208,14 +208,14 @@ const Feature = () => {
         <div className="w-full bg-[#24252d] border border-purple-900 shadow-lg flex flex-col rounded-xl my-4 p-6 hover:scale-105 duration-300 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-purple-400"></div>
           <img
-            className="w-16 h-16 mx-auto mt-2 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 p-3"
+            className="w-26 h-26 mx-auto mt-10 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 p-3"
             src={Triple}
             alt="/"
           />
-          <h2 className="text-2xl font-bold text-white text-center py-6">Tagging Harassers</h2>
+          <h2 className="text-2xl font-bold text-white text-center mt-6">Tagging Harassers</h2>
           <div className="text-center font-medium text-gray-400">
-            <p className="py-3 mx-8 border-b border-gray-700 mt-8">Identifies and flags harassers for future reference.</p>
-            <p className="py-3 mx-8 border-b border-gray-700">Maintains a detailed record of harassment instances.</p>
+            <p className="py-3 mx-8 border-b border-gray-700 mt-8">Identifies and flags harassers for future reference. Maintains a detailed record of harassment instances.</p>
+            
           </div>
           <button className="bg-gradient-to-r from-purple-600 to-purple-400 mx-auto w-[200px] px-6 py-3 my-6 rounded-lg text-white font-semibold hover:opacity-90 transition-all">
             Learn More
@@ -228,20 +228,18 @@ const Feature = () => {
           <div className="w-full bg-[#24252d] border border-purple-900 shadow-lg flex flex-col rounded-xl my-4 p-6 hover:scale-105 duration-300 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-purple-400"></div>
             <img
-              className="w-16 h-16 mx-auto mt-2 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 p-3"
+              className="w-26 h-26 mx-auto mt-10 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 p-3"
               src={Four}
               alt="/"
             />
-            <h2 className="text-2xl font-bold text-white text-center py-6">
+            <h2 className="text-2xl font-bold text-white text-center mt-6">
               Cybercrime Helpline
             </h2>
             <div className="text-center font-medium text-gray-400">
               <p className="py-3 mx-8 border-b border-gray-700 mt-8">
-                Direct integration with cybercrime helpline services.
+                Direct integration with cybercrime helpline services. Provides prompt support for victims of online abuse.
               </p>
-              <p className="py-3 mx-8 border-b border-gray-700">
-                Provides prompt support for victims of online abuse.
-              </p>
+            
             </div>
             <button className="bg-gradient-to-r from-purple-600 to-purple-400 mx-auto w-[200px] px-6 py-3 my-6 rounded-lg text-white font-semibold hover:opacity-90 transition-all">
               Learn More
@@ -252,20 +250,18 @@ const Feature = () => {
           <div className="w-full bg-[#24252d] border border-purple-900 shadow-lg flex flex-col rounded-xl my-4 p-6 hover:scale-105 duration-300 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-purple-400"></div>
             <img
-              className="w-16 h-16 mx-auto mt-2 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 p-3"
+              className="w-26 h-26 mx-auto mt-10 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 p-3"
               src={Five}
               alt="/"
             />
-            <h2 className="text-2xl font-bold text-white text-center py-6">
+            <h2 className="text-2xl font-bold text-white text-center mt-6">
               Easy Reporting
             </h2>
             <div className="text-center font-medium text-gray-400">
               <p className="py-3 mx-8 border-b border-gray-700 mt-8">
-                Simplifies the process of reporting harassment cases.
+                Simplifies the process of reporting harassment cases. Ensures clear and concise documentation for action.
               </p>
-              <p className="py-3 mx-8 border-b border-gray-700">
-                Ensures clear and concise documentation for action.
-              </p>
+
             </div>
             <button className="bg-gradient-to-r from-purple-600 to-purple-400 mx-auto w-[200px] px-6 py-3 my-6 rounded-lg text-white font-semibold hover:opacity-90 transition-all">
               Learn More

@@ -17,13 +17,13 @@ const Navbar = () => {
 
           
           <div className="flex items-center justify-center space-x-8">
-            <a href="#" className="text-white hover:text-purple-400 transition-colors">
+            <a href="/" className="text-white hover:text-purple-400 transition-colors">
               Home
             </a>
-            <a href="#" className="text-white hover:text-purple-400 transition-colors">
+            <a href="/how-it-works" className="text-white hover:text-purple-400 transition-colors">
               How it works
             </a>
-            <a href="#" className="text-white hover:text-purple-400 transition-colors">
+            <a href="/features" className="text-white hover:text-purple-400 transition-colors">
               Features
             </a>
           </div>
