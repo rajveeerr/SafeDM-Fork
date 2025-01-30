@@ -878,6 +878,57 @@ router.get('/check-harasser', async (req, res) => {
   }
 });
 
+router.get('/check-dummy-harasser', async (req, res) => {
+
+    res.json({
+      status: 'success',
+      data: {
+        isHarasser: true,
+        statistics: {
+          totalUniqueHiders: hideCount,
+          threshold: HARASSER_THRESHOLD,
+          totalReports: reports.length,
+          reportSeverityBreakdown: reports.reduce((acc, report) => {
+            acc[report.severity] = (acc[report.severity] || 0) + 1;
+            return acc;
+          }, {}),
+          reportTypeBreakdown: reports.reduce((acc, report) => {
+            acc[report.reportType] = (acc[report.reportType] || 0) + 1; 
+            return acc;
+          }, {})
+        },
+        hiddenBy: hiddenInstances.map(instance => ({
+          userId: instance.hiddenBy._id,
+          name: instance.hiddenBy.name,
+          date: instance.createdAt,
+          reason: instance.reason || 'Not specified'
+        })),
+        lastReviewDate: new Date(),
+        metadata: {
+          name,
+          profileUrl,
+          recentReports: reports
+            .sort((a, b) => b.createdAt - a.createdAt)
+            .slice(0, 3)
+            .map(report => ({
+              type: report.reportType,
+              severity: report.severity,
+              status: report.status,
+              date: report.createdAt
+            }))
+        }
+      }
+    });
+  } catch (error) {
+    console.error('Check harasser status error:', error);
+    res.status(500).json({
+      status: 'error',
+      type: 'ServerError',
+      message: 'Failed to check harasser status'
+    });
+  }
+});
+
 //maybe we can use this on dashboard 
 router.get('/known-harassers', authMiddleware, async (req, res) => {
   try {
