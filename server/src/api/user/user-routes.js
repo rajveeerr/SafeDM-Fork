@@ -584,7 +584,7 @@ const hideMessageSchema = z.object({
 router.post('/hide-message', authMiddleware, async (req, res) => {
   try {
     const validatedData = await hideMessageSchema.parseAsync(req.body);
-
+ 
     const existingMessage = await HiddenMessage.findOne({
       messageContent: validatedData.messageContent,
       userName: validatedData.userName,

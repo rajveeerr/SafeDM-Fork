@@ -29,7 +29,7 @@ export const isAuthenticated = async (): Promise<boolean> => {
 };
 export const getToken = async (): Promise<string | null> => {
   return new Promise((resolve) => {
-    chrome.storage.local.get(['authToken'], (result) => {
+     chrome.storage.local.get(['authToken'], (result) => {
       const token = result.authToken;
       if (!token) {
         console.log('No token found');
