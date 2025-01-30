@@ -200,6 +200,13 @@ const hideAbusiveMessagesInbox = async () => {
     ".msg-s-event-listitem__body:not(.message-processed)"
   );
 
+  const { authToken } = await new Promise<{ authToken?: string }>((resolve) => {
+    chrome.storage.local.get(['authToken'], resolve);
+  });
+
+  // Track if we've added the login prompt
+  let loginPromptAdded = false;
+
   chatPreviews.forEach(async (preview) => {
     const message = preview.innerHTML || "";
     const cleanedMessage = cleanMessage(message);
@@ -231,32 +238,14 @@ const hideAbusiveMessagesInbox = async () => {
       // Final data object
       const messageData = {
         profileUrl,
-        userName : name,
+        userName: name,
         timeOfMessage: time,
         messageContent,
-        platform : "linkedIn"
+        platform: "linkedIn"
       };
 
       console.log("Harassment detected:", messageData);
 
-      try {
-        const response = await fetch('http://localhost:3000/api/v1/user/hide-message', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(messageData)
-        });
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const result = await response.json();
-        console.log('API response:', result);
-      } catch (error) {
-        console.error('Error reporting harassment:', error);
-      }
 
       const messageContainer = preview as HTMLElement;
       if (messageContainer) {
@@ -269,7 +258,76 @@ const hideAbusiveMessagesInbox = async () => {
         messageContainer.textContent = '';
         messageContainer.appendChild(warningContent);
         messageContainer.style.border = "3px dashed red";
-      } 
+
+
+        if (authToken) {
+          // Existing API call code
+          try {
+            const response = await fetch('http://localhost:3000/api/v1/user/hide-message', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${authToken}`,
+              },
+              body: JSON.stringify({
+                profileUrl,
+                userName: name,
+                timeOfMessage: time,
+                messageContent: cleanedMessage,
+                platform: "linkedIn"
+              })
+            });
+
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const result = await response.json();
+            console.log('API response:', result);
+          } catch (error) {
+            console.error('Error reporting harassment:', error);
+          }
+        } else if (!loginPromptAdded) {
+          // Add login prompt once
+          const bottomElement = document.querySelector('.msg-s-message-list__bottom-of-list');
+          if (bottomElement) {
+            const existingPrompt = bottomElement.querySelector('#login-prompt');
+            if (!existingPrompt) {
+              const loginPrompt = document.createElement('div');
+              loginPrompt.id = 'login-prompt';
+              loginPrompt.innerHTML = `
+              <div style="
+                display: flex; 
+                align-items: center; 
+                gap: 8px; 
+                padding: 8px 12px; 
+                background: rgba(34, 197, 94, 0.1); /* Light green background */
+                border-radius: 6px; 
+                font-size: 14px;
+              ">
+                <span style="color: #22c55e; flex: 1;">
+                  Want to save your messages? 
+                </span>
+                <a href="YOUR_LOGIN_URL" style="
+                  color: #fff; 
+                  background: #22c55e; /* Green button */
+                  padding: 4px 10px; 
+                  border-radius: 4px; 
+                  text-decoration: none;
+                  font-weight: bold;
+                  transition: background 0.3s ease;
+                " 
+                onmouseover="this.style.background='#16a34a'"
+                onmouseout="this.style.background='#22c55e'">
+                  Login
+                </a>
+              </div>
+            `;
+            
+
+              bottomElement.appendChild(loginPrompt);
+            }
+            loginPromptAdded = true;
+          }
+        }
+      }
     }
   });
 }
