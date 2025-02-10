@@ -5,6 +5,7 @@ import {
     FaGithubSquare,
     FaInstagram
 } from 'react-icons/fa'
+import Safire from "/src/assets/Safire.png"
 
 const Footer = () => {
     return (
@@ -18,9 +19,11 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto flex pt-8 flex-wrap justify-between items-start gap-8">
           
           <div className="flex flex-col gap-4 max-w-sm">
-            <h2 className="text-purple-500 text-2xl font-bold">SafeDM</h2>
+            <div>
+                        <img className='py-1 ' src={Safire} alt="/" />
+                      </div>
             <p className="text-gray-300">
-              Harassment Saver protects users from online harassment by ensuring privacy,
+              Safire protects users from online harassment by ensuring privacy,
               support, and legal resources, making the internet safer for all.
             </p>
           </div>
@@ -29,9 +32,11 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <h3 className="text-purple-600 font-semibold">Explore</h3>
             <ul className="flex flex-col gap-2">
-              <li><a href="/Hero" className="text-gray-300 hover:text-purple-500">Home</a></li>
-              <li><a href="/VidOverlay" className="text-gray-300 hover:text-purple-500">Demo</a></li>
-              <li><a href="/Feature" className="text-gray-300 hover:text-purple-500">Features</a></li>
+              <li><a href="/" className="text-gray-300 hover:text-purple-500">Home</a></li>
+              <li><a href="/how-it-works" className="text-gray-300 hover:text-purple-500">Demo</a></li>
+              <li><a href="/features" className="text-gray-300 hover:text-purple-500">Features</a></li>
+              <li><a href="/pricing" className="text-gray-300 hover:text-purple-500">Premium</a></li>
+              <li><a href="/terms" className="text-gray-300 hover:text-purple-500">T & C</a></li>
             </ul>
           </div>
   
@@ -39,7 +44,7 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <h3 className="text-purple-600 font-semibold">Resources</h3>
             <ul className="flex flex-col gap-2">
-              <li><a href="https://github.com/divyansharma001/Harrashment-Saver-Project" className="text-gray-300 hover:text-purple-600">Github</a></li>
+              <li><a href="https://github.com/divyansharma001/Harrashment-Saver-Project1" className="text-gray-300 hover:text-purple-600">Github</a></li>
               <li><a href="https://linkedin.com" className="text-gray-300 hover:text-purple-600">Help</a></li>
               
             </ul>
@@ -56,7 +61,7 @@ const Footer = () => {
   
         
         <div className="mt-8 text-gray-400 max-w-6xl flex m-auto text-sm">
-          Copyright @SafeDM 2025
+          Copyright @Safire 2025
         </div>
       </footer>
     );

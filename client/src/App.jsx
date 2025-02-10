@@ -5,6 +5,7 @@ import { Outlet } from "react-router-dom"
 import Footer from './components/Footer'
 import { ChatBot } from '10xanswers';
 
+
 function App() {
 
   return (
@@ -27,8 +28,8 @@ function App() {
         }}
         backendUrl="https://ask-10x-questions.vercel.app/"
         title="Iris Bot"
-        draggable={true}
-        startOpen={true}
+        draggable={false}
+        startOpen={false}
         description="Get the help you need with online harassment and stay protected."
         cta="Start Asking your Burning Questions"
         prompt="Prompt:

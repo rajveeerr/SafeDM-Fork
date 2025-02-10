@@ -13,27 +13,20 @@ const VidOverlay = () => {
   };
 
   return (
-    <div className="relative w-full h-screen mt-[-200px]">
-      <div className="absolute bottom-0 left-0 right-0 z-0 bg-black bg-opacity-50 flex justify-center items-center pointer-events-auto">
-        {/* Video element */}
+    <div className="w-full flex justify-center">
+      <div className="relative">
         <img
-          // ref={videoRef}
-          className="w-full max-w-[1200px] rounded-lg shadow-lg"
+          className="w-full max-w-[280px] sm:max-w-[480px] md:max-w-[768px] lg:max-w-[1200px] rounded-lg shadow-lg"
           src={image}
-          // onClick={handlePlay} // Allow video to play on click
         />
-          
-       
-
-        {/* Custom Play Button */}
         {!isPlaying && (
           <button
-            className="absolute text-white bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full p-4 focus:outline-none flex items-center justify-center"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 sm:p-3 md:p-4 focus:outline-none"
             onClick={handlePlay}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10"
+              className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -53,4 +46,3 @@ const VidOverlay = () => {
 };
 
 export default VidOverlay;
-
