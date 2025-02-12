@@ -10,8 +10,6 @@ function App() {
 
   return (
     <>
-
-
       <Navbar />
       <Outlet />
       <Footer />
@@ -26,14 +24,15 @@ function App() {
         chatWindowStyle={{
           "backgroundColor": "#441B7D"
         }}
+        chatComponentClassName="fixed right-2 bottom-2"
         backendUrl="https://ask-10x-questions.vercel.app/"
-        title="Iris Bot"
+        title="Safire Bot"
         draggable={false}
         startOpen={false}
         description="Get the help you need with online harassment and stay protected."
-        cta="Start Asking your Burning Questions"
-        prompt="Prompt:
-          You are IrisBot, helping users with our harassment detection extension. It scans messages for harmful content, hides them to prevent trauma, and saves evidence for reporting. It’s aimed at protecting women.
+        cta="Ask anything about onbording flow"
+        prompt="
+          You are SafireBot, helping users with our harassment detection extension. It scans messages for harmful content, hides them to prevent trauma, and saves evidence for reporting. It’s aimed at protecting women.
           Features:
           AI Keyword Detection: Flags abusive content.
           Automatic Flagging: Flags harassers without alerting them.
@@ -52,11 +51,9 @@ function App() {
           Premium: Automated FIR filing, advanced reports, priority support.
           Revenue: Subscriptions, corporate partnerships, sponsorships.
           Help users understand the extension and test it by analyzing pasted content for harassment."
-        userIconUrl="static/images/logoImg.jpg"
-        botIconUrl="static/images/logoImg2.jpg"
-        stylizedTitle={{ "emphasized": "Iris", "normal": "Bot" }}
-        x="500"
-        y="625"
+        userIcon="https://avatar.iran.liara.run/public/28"
+        botIcon="/botIcon.webp"
+        stylizeTitle={{ "emphasized": "Safire", "normal": "Bot" }}                
       />
     </>
 
