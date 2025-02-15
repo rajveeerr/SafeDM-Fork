@@ -45,7 +45,7 @@ const Navbar = () => {
 
           {/* Desktop Sign In */}
           <div className="hidden md:block">
-            <a href="http://localhost:3000/auth/sign-in" className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">
+            <a href="https://safe-dm-dashboard.vercel.app/signin" className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">
               Sign in
             </a>
           </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
                 <a href="/pricing" className="text-white hover:text-purple-400 transition-colors">
                   Pricing
                 </a>
-                <a href="http://localhost:3000/auth/sign-in" className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors text-center">
+                <a href="https://safe-dm-dashboard.vercel.app/signin" className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors text-center">
                   Sign in
                 </a>
               </div>

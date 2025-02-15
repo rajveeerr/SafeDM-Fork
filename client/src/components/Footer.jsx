@@ -54,7 +54,7 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <h3 className="text-purple-500 font-semibold">Links</h3>
             <ul className="flex flex-col text-gray-300 gap-2">
-              <li><a href="https://github.com/divyansharma001/Harrashment-Saver-Project"><FaGithubSquare size={30}/></a></li>
+              <li><a href="https://github.com/divyansharma001/Harrashment-Saver-Project1"><FaGithubSquare size={30}/></a></li>
             </ul>
           </div>
         </div>
