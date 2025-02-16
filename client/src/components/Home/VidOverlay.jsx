@@ -19,7 +19,7 @@ const VidOverlay = () => {
           className="w-full max-w-[280px] sm:max-w-[480px] md:max-w-[768px] lg:max-w-[1200px] rounded-lg shadow-lg"
           src={image}
         />
-        {/* {!isPlaying && (
+        {!isPlaying && (
           <button
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full p-2 sm:p-3 md:p-4 focus:outline-none"
             onClick={handlePlay}
@@ -39,7 +39,7 @@ const VidOverlay = () => {
               />
             </svg>
           </button>
-        )} */}
+        )} 
       </div>
     </div>
   );
