@@ -89,7 +89,7 @@ const Feature = () => {
           </div>
           <img className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[400px] mx-auto my-4 order-1 md:order-2" src={Three} alt="/" />
         </div>
-        <div className="flex w-[350px] items-center justify-center mt-20 bg-black text-white px-4 py-2 mx-auto rounded-4xl border border-[#402E7F] p-2"
+        {/*<div className="flex w-[350px] items-center justify-center mt-20 bg-black text-white px-4 py-2 mx-auto rounded-4xl border border-[#402E7F] p-2"
         style={{
           background: 'linear-gradient(0deg, rgba(37, 32, 66, 0.50) 0%, rgba(41, 41, 82, 0.50) 109.33%)',
           boxShadow: '0px 10px 26.2px 15px rgba(102, 61, 158, 0.21)',
@@ -100,7 +100,7 @@ const Feature = () => {
             Testing
           </span>
           <span>phase.</span>
-        </div>
+        </div>*/}
       </div>
     </div>
   );
