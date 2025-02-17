@@ -89,18 +89,17 @@ const Feature = () => {
           </div>
           <img className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[400px] mx-auto my-4 order-1 md:order-2" src={Three} alt="/" />
         </div>
-        <div class="inline-flex relative z-15 items-center rounded-full border border-secondary p x-2.5 font-semibold transition-colors focus:outline-none focus: ring-2 focu s:ring-ring focus:ring-offset-2 text-foreground text-sm py-2"> flex == $0
-
-          <span> Product is still in </span>
-
-          <span class="mx-2 text-primary">
-
-            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus: ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80">Testing</div>
-
+        <div className="flex w-[350px] items-center justify-center mt-20 bg-black text-white px-4 py-2 mx-auto rounded-4xl border border-[#402E7F] p-2"
+        style={{
+          background: 'linear-gradient(0deg, rgba(37, 32, 66, 0.50) 0%, rgba(41, 41, 82, 0.50) 109.33%)',
+          boxShadow: '0px 10px 26.2px 15px rgba(102, 61, 158, 0.21)',
+          backdropFilter: 'blur(20px)'
+        }}>
+          <span>Product is still in</span>
+          <span className="mx-2 bg-purple-600 text-white px-3 py-1.5 rounded-full">
+            Testing
           </span>
-
           <span>phase.</span>
-
         </div>
       </div>
     </div>
