@@ -57,11 +57,11 @@ const Feature = () => {
           </p>
         </div>
 
-        
+
         <div className="max-w-[1040px] mx-auto grid py-6 sm:py-8 md:py-10 text-white md:grid-cols-2 gap-8">
           <img className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto my-4" src={One} alt="/" />
           <div className="m-auto flex flex-col px-4 md:ml-20 justify-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold py-4 sm:py-6 md:py-10">1. Hide Abusive Messages</h1>                   
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold py-4 sm:py-6 md:py-10">1. Hide Inappropriate Messages</h1>
             <p className="text-sm sm:text-base">Harassing messages are hidden from the user while remaining stored for evidence. The harasser remains unaware, reducing the risk of retaliation and protecting the user from distress.</p>
           </div>
         </div>
@@ -88,6 +88,19 @@ const Feature = () => {
             <p className="text-sm sm:text-base">Generates ready-to-send reports containing all necessary evidence, including screenshots and timestamps. These reports are formatted for submission to law enforcement or platform moderators.</p>
           </div>
           <img className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[400px] mx-auto my-4 order-1 md:order-2" src={Three} alt="/" />
+        </div>
+        <div class="inline-flex relative z-15 items-center rounded-full border border-secondary p x-2.5 font-semibold transition-colors focus:outline-none focus: ring-2 focu s:ring-ring focus:ring-offset-2 text-foreground text-sm py-2"> flex == $0
+
+          <span> Product is still in </span>
+
+          <span class="mx-2 text-primary">
+
+            <div class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus: ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80">Testing</div>
+
+          </span>
+
+          <span>phase.</span>
+
         </div>
       </div>
     </div>

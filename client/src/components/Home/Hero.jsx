@@ -3,6 +3,9 @@ import React from 'react';
 import { ReactTyped } from "react-typed"
 import Circle from '../../assets/Circle.png'
 import Grid from '/src/assets/Grid.png';
+import { 
+    FaChrome,
+} from 'react-icons/fa'
 
 const Hero = () => {
     return (
@@ -62,8 +65,8 @@ const Hero = () => {
                             />
                         </p>
                     </div>
-                    <button className="bg-purple-600 mx-auto w-[160px] sm:w-[180px] md:w-[200px] py-2 sm:py-3 my-4 sm:my-5 md:my-5 rounded-3xl text-white font-bold pointer-events-auto text-sm sm:text-base md:text-lg">
-                        Install Now
+                    <button className="bg-purple-600 mx-auto w-[200px] gap-2 sm:w-[250px] justify-center flex items-center py-2 sm:py-3 my-4 sm:my-5 md:my-5 rounded-3xl text-white font-bold pointer-events-auto text-sm sm:text-base md:text-lg">
+                    <FaChrome size={25}/>Install Web Extension
                     </button>
                     <div className=" mt-6 sm:mt-8 md:mt-10">
                         <img className="w-16 mt-20 sm:mt-8 md:mt-10 sm:w-20 md:w-24" src={Circle} alt="/" />
