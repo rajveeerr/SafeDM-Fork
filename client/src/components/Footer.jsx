@@ -16,7 +16,7 @@ const Footer = () => {
         boxShadow: '0px 4px 24px -1px rgba(0, 0, 0, 0.20)',
         backdropFilter: 'blur(20px)'
       }}>
-        <div className="max-w-6xl mx-auto flex pt-8 flex-wrap justify-between items-start gap-8">
+        <div className="font-[futura] max-w-6xl mx-auto flex pt-8 flex-wrap justify-between items-start gap-8">
           
           <div className="flex flex-col gap-4 max-w-sm">
             <div>
@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
   
         
-        <div className="mt-8 text-gray-400 max-w-6xl flex m-auto text-sm">
+        <div className=" font-[futura] mt-8 text-gray-400 max-w-6xl flex m-auto text-sm">
           Copyright @Safire 2025
         </div>
       </footer>

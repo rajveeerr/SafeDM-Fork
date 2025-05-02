@@ -27,12 +27,12 @@ const Hero = () => {
                   />
             <div className="relative h-screen overflow-hidden z-0">
                 
-                <div className="absolute w-full flex flex-col mt-20 justify-center items-center z-5 text-center pointer-events-none">
+                <div className="absolute w-full flex flex-col mt-15 justify-center items-center z-5 text-center pointer-events-none">
                     
-                    <h1 className="text-5xl sm:text-4xl md:text-6xl lg:text-7xl py-10 sm:py-10 md:py-6 lg:py-7 text-white font-bold">
+                    <h1 className="font-[URW-bold] text-5xl sm:text-4xl md:text-6xl lg:text-7xl pt-10 sm:pt-10 md:py-6 lg:py-7 text-white font-bold">
                         Stay Safe Online,{' '}
                         <div className="relative inline-block">
-                            <span className="text-transparent bg-gradient-to-r from-purple-600 via-purple-300 to-purple-600 bg-clip-text">
+                            <span className="font-[URW-bold-italic] text-transparent bg-gradient-to-r from-purple-600 via-purple-300 to-purple-600 bg-clip-text">
                                 Hassle-Free.
                             </span>
                             <svg
@@ -53,7 +53,12 @@ const Hero = () => {
                     </h1>
                     
                     <div className="flex justify-center items-center px-4 sm:px-6 md:px-8">
-                        <p className="text-lg sm:text-xl md:text-2xl font-URW mt-5 text-white">
+                        <p className="font-[futura] bg-clip-text text-transparent text-lg sm:text-xl md:text-2xl font-URW mb-5" style={{
+                            backgroundImage:
+                            'linear-gradient(89deg, #815CF2 0.62%, #C2A6E8 16.57%, #FFF 52.45%, #C2A6E8 88.67%, #815CF2 97.4%)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent'
+                        }}>
                             Hide harassment messages while securing evidence for legal actions. <br className="hidden sm:block" />
                             Stay
                             <ReactTyped
@@ -65,7 +70,7 @@ const Hero = () => {
                             />
                         </p>
                     </div>
-                    <button className="bg-purple-600 mx-auto w-[200px] gap-2 sm:w-[250px] justify-center flex items-center py-2 sm:py-3 my-4 sm:my-5 md:my-5 rounded-3xl text-white font-bold pointer-events-auto text-sm sm:text-base md:text-lg">
+                    <button className="bg-purple-600 font-[futura] transition-transform duration-200 hover:scale-95 active:scale-90 mx-auto w-[200px] gap-2 sm:w-[250px] justify-center flex items-center py-2 sm:py-3 my-4 sm:my-5 md:my-5 rounded-3xl text-white font-bold pointer-events-auto text-sm sm:text-base md:text-lg">
                     <FaChrome size={25}/>Install Web Extension
                     </button>
                     <div className=" mt-6 sm:mt-8 md:mt-10">

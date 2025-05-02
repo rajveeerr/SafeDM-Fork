@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full md:w-[1000px] mx-auto py-2 px-4 md:px-6 sticky top-2 z-10">
-      <div className="max-w-7xl mx-auto rounded-4xl border border-[#402E7F] p-2"
+      <div className="max-w-7xl font-[futura] mx-auto rounded-4xl border border-[#402E7F] p-2"
            style={{
              background: 'linear-gradient(0deg, rgba(37, 32, 66, 0.50) 0%, rgba(41, 41, 82, 0.50) 109.33%)',
              boxShadow: '0px 10px 26.2px 15px rgba(102, 61, 158, 0.21)',
@@ -45,7 +45,7 @@ const Navbar = () => {
 
           {/* Desktop Sign In */}
           <div className="hidden md:block">
-            <a href="https://safe-dm-dashboard.vercel.app/signin" className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">
+            <a href="https://safe-dm-dashboard.vercel.app/signin" className="bg-purple-600 text-white font-bold px-6 py-2 rounded-full hover:bg-purple-700 transition-colors">
               Sign in
             </a>
           </div>

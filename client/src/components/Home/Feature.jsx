@@ -25,14 +25,14 @@ const Feature = () => {
       />
       <div className="relative z-10">
         <div className="max-w-[700px] mx-auto text-center mb-8 sm:mb-16 md:mb-24 lg:mb-30 px-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white my-6 sm:my-8 md:my-10">
+          <h1 className="text-3xl font-[URW-bold] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white my-6 sm:my-8 md:my-10">
             Advanced{' '}
-            <span className="text-transparent bg-gradient-to-r from-purple-600 via-purple-300 to-purple-600 bg-clip-text">
+            <span className="text-transparent font-[URW-bold-italic] bg-gradient-to-r from-purple-600 via-purple-300 to-purple-600 bg-clip-text">
               functionality.
             </span>{' '}
             Flawless{' '}
             <div className="relative inline-block">
-              <span className="text-transparent bg-gradient-to-r from-purple-600 via-purple-200 to-purple-600 bg-clip-text">
+              <span className="text-transparent font-[URW-bold-italic] bg-gradient-to-r from-purple-600 via-purple-200 to-purple-600 bg-clip-text">
                 integration
               </span>
               <svg
@@ -51,7 +51,7 @@ const Feature = () => {
               </svg>
             </div>
           </h1>
-          <p className="text-gray-400 text-base sm:text-lg md:text-xl px-4">
+          <p className=" font-[futura] text-gray-400 text-base sm:text-lg md:text-xl px-4">
             Offering exceptional power paired with seamless compatibility for your workflow—delivering
             results without compromise.
           </p>
@@ -61,31 +61,31 @@ const Feature = () => {
         <div className="max-w-[1040px] mx-auto grid py-6 sm:py-8 md:py-10 text-white md:grid-cols-2 gap-8">
           <img className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto my-4" src={One} alt="/" />
           <div className="m-auto flex flex-col px-4 md:ml-20 justify-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold py-4 sm:py-6 md:py-10">1. Hide Inappropriate Messages</h1>
-            <p className="text-sm sm:text-base">Harassing messages are hidden from the user while remaining stored for evidence. The harasser remains unaware, reducing the risk of retaliation and protecting the user from distress.</p>
+            <h1 className="font-[URW-bold] text-3xl sm:text-4xl md:text-5xl font-bold py-4 sm:py-6 md:py-10">1. Hide Inappropriate Messages</h1>
+            <p className="font-[futura] text-sm sm:text-base">Harassing messages are hidden from the user while remaining stored for evidence. The harasser remains unaware, reducing the risk of retaliation and protecting the user from distress.</p>
           </div>
         </div>
 
         <div className="max-w-[1040px] mx-auto py-6 sm:py-8 md:py-10 grid text-white md:grid-cols-2 gap-8">
-          <div className="m-auto flex flex-col px-4 md:ml-20 justify-center order-2 md:order-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold py-4 sm:py-6 md:py-10">2. Tag Harassers</h1>
-            <p className="text-sm sm:text-base">Allows users to tag and track harassers, making it easier to identify repeat offenders. This feature helps in better reporting and taking action against persistent abuse.</p>
-          </div>
-          <img className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[400px] mx-auto my-4 order-1 md:order-2" src={Two} alt="/" />
-        </div>
-
-        <div className="max-w-[1040px] mx-auto py-6 sm:py-8 md:py-10 grid text-white md:grid-cols-2 gap-8">
-          <img className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto my-4" src={Four} alt="/" />
           <div className="m-auto flex flex-col px-4 md:ml-20 justify-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold py-4 sm:py-6 md:py-10">3. Hide User</h1>
-            <p className="text-sm sm:text-base">Harassers believe their messages are delivered, but they never appear in the recipient’s inbox or DMs.</p>
+            <h1 className="font-[URW-bold] text-3xl sm:text-4xl md:text-5xl font-bold py-2 sm:py-6 md:pb-10 md:pt-0">2. Hide User</h1>
+            <p className="font-[futura] text-sm sm:text-base">Harassers believe their messages are delivered, but they never appear in the recipient’s inbox or DMs. This prevents further escalation as harassers could use multiple id's if blocked directly.</p>
+          </div>
+          <img className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto my-4" src={Four} alt="/" />
+        </div>
+
+        <div className="max-w-[1040px] mx-auto py-6 sm:py-8 md:py-10 grid text-white md:grid-cols-2 gap-8">
+          <img className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[400px] mx-auto my-4" src={Two} alt="/" />
+          <div className="m-auto flex flex-col px-4 md:ml-20 justify-center order-2 md:order-1">
+            <h1 className="font-[URW-bold] text-3xl sm:text-4xl md:text-5xl font-bold py-4 sm:py-6 md:py-10">3. Tag Harassers</h1>
+            <p className="font-[futura] text-sm sm:text-base">Allows users to tag and track harassers, making it easier to identify repeat offenders. This feature helps in better reporting and taking action against persistent abuse.</p>
           </div>
         </div>
 
         <div className="max-w-[1040px] mx-auto py-6 sm:py-8 md:py-10 grid text-white md:grid-cols-2 gap-8">
           <div className="m-auto flex flex-col px-4 md:ml-20 justify-center order-2 md:order-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold py-4 sm:py-6 md:py-10">4. Generate Reports</h1>
-            <p className="text-sm sm:text-base">Generates ready-to-send reports containing all necessary evidence, including screenshots and timestamps. These reports are formatted for submission to law enforcement or platform moderators.</p>
+            <h1 className="font-[URW-bold] text-3xl sm:text-4xl md:text-5xl font-bold py-4 sm:py-6 md:py-10">4. Generate Reports</h1>
+            <p className="font-[futura] text-sm sm:text-base">Generates ready-to-send reports containing all necessary evidence, including screenshots and timestamps. These reports are formatted for submission to law enforcement or platform moderators.</p>
           </div>
           <img className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[400px] mx-auto my-4 order-1 md:order-2" src={Three} alt="/" />
         </div>

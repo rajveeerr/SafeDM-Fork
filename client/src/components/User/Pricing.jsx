@@ -1,8 +1,7 @@
 import React from 'react'
-import Triple from '/src/assets/triple.png'
-import Single from '/src/assets/single.png'
+
 import Grid from '/src/assets/Grid.png';
-import { Check, Circle } from 'lucide-react';
+import { Crown } from 'lucide-react';
 
 const Pricing = () => {
     return (
@@ -26,14 +25,14 @@ const Pricing = () => {
             />
             <div className='relative z-10 w-full'>
                 <div className="max-w-[700px] mx-auto text-center mb-4 sm:mb-10 md:mb-14 lg:mb-20 px-4">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white my-6 sm:my-8 md:my-10">
+                    <h1 className="text-3xl font-[URW-bold] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white my-6 sm:my-8 md:my-10">
                         Experience{' '}
-                        <span className="text-transparent bg-gradient-to-r from-purple-600 via-purple-300 to-purple-600 bg-clip-text">
+                        <span className="text-transparent font-[URW-bold-italic] bg-gradient-to-r from-purple-600 via-purple-300 to-purple-600 bg-clip-text">
                             Premium
                         </span>{' '}
                         Safety{' '}
                         <div className="relative inline-block">
-                            <span className="text-transparent bg-gradient-to-r from-purple-600 via-purple-200 to-purple-600 bg-clip-text">
+                            <span className="text-transparent font-[URW-bold-italic] bg-gradient-to-r from-purple-600 via-purple-200 to-purple-600 bg-clip-text">
                                 Features.
                             </span>
                             <svg
@@ -52,55 +51,113 @@ const Pricing = () => {
                             </svg>
                         </div>
                     </h1>
-                    <p className="text-gray-400 text-base sm:text-lg md:text-xl px-4">
+                    <p className="text-gray-400 font-[futura] text-base sm:text-lg md:text-xl px-4">
                         Unlock advanced security, priority support, and exclusive tools to safeguard your online experience.
                     </p>
                 </div>
-                <div className='max-w-[1240px] pb-30 mx-auto grid md:grid-cols-2 gap-8 justify-items-center px-4'>
-                    <div className='w-full max-w-[440px] bg-gradient-to-b from-gray-100/10 to-transparent backdrop-blur-sm border border-gray-700 shadow-lg flex flex-col rounded-xl my-8 md:my-0 p-4 sm:p-6 hover:scale-105 duration-300 relative overflow-hidden hover:border-purple-600'>
-                        <img className='w-12 h-12 sm:w-16 sm:h-16 mx-auto mt-2 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 p-3' src={Single} alt="/" />
-                        <h2 className='text-3xl sm:text-4xl font-bold text-white text-center py-4 sm:py-6'>Free Plan</h2>
-                        <div className='text-left font-medium text-white'>
-                            <p className='py-2 sm:py-3 items-center mx-4 sm:mx-8 border-t border-gray-700/50 mt-8 flex'><Circle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 flex-shrink-0 mx-2" />Real-time LinkedIn message screening</p>
-                            <p className='py-2 sm:py-3 items-center mx-4 sm:mx-8 flex'><Circle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 flex-shrink-0 mx-2" />Basic message blocking</p>
-                            <p className='py-2 sm:py-3 items-center mx-4 sm:mx-8 flex'><Circle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 flex-shrink-0 mx-2" />User blocking management</p>
-                            <p className='py-2 sm:py-3 items-center mx-4 sm:mx-8 border-b border-gray-700/50 flex'><Circle className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 flex-shrink-0 mx-2" />Message history tracking</p>
+                <div className="flex flex-col md:flex-row gap-16 items-center justify-center pb-30" >
+                    {/* Free Plan Card */}
+                    <div className="w-full max-w-md rounded-3xl shadow-lg transition-transform duration-300 hover:scale-105" style={{
+                        borderRadius: '20.355px',
+                        background: 'linear-gradient(152deg, #252426 -9.42%, #252426 33.5%, #343336 50.92%, #252426 66.63%, #252426 106.79%)',
+                        boxShadow: '0px 3.257px 19.541px -0.814px rgba(0, 0, 0, 0.20)',
+                        backdropFilter: 'blur(16.284381866455078px)'
+                    }}>
+                        <div className="h-full rounded-3xl py-8 px-4 flex flex-col">
+                            <div className="text-center mb-8">
+                                <h2 className="text-3xl font-bold text-white mb-2">Free Plan</h2>
+                                <p className="text-gray-400 font-[futura]">Basic protection for light use</p>
+                            </div>
+
+                            <div className="text-center mb-8">
+                                <div className="flex justify-center">
+                                    <span className="text-6xl font-bold text-white">$0</span>
+                                </div>
+                            </div>
+
+                            <div className=" p-4 mb-8 text-center">
+                                <button className="w-full py-4 font-[futura] font-medium text-lg text-white transition-transform duration-200 hover:scale-95 active:scale-90" style={{
+                                    borderRadius: '8px',
+                                    border: '0.1px rgba(217, 217, 217, 0.10)',
+                                    background: 'rgba(217, 217, 217, 0.10)',
+                                    boxShadow: '0px 4px 6.8px 0px rgba(0, 0, 0, 0.25)'
+                                }}>
+                                    Current plan
+                                </button>
+                            </div>
+
+                            <div className="flex-1 space-y-2 ml-6 font-[futura]">
+                                <div className="flex items-start">
+                                    <span className="text-green-400 mr-2 mt-1">✓</span>
+                                    <span className="text-white">Real-time LinkedIn message screening</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <span className="text-green-400 mr-2 mt-1">✓</span>
+                                    <span className="text-white">Basic message blocking</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <span className="text-green-400 mr-2 mt-1">✓</span>
+                                    <span className="text-white">User blocking management</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <span className="text-green-400 mr-2 mt-1">✓</span>
+                                    <span className="text-white">Message history tracking</span>
+                                </div>
+                            </div>
                         </div>
-                        <button className='bg-white mx-auto w-full sm:w-[200px] px-6 py-3 my-6 rounded-lg text-gray-500 font-semibold hover:opacity-90 transition-all'>Start Trial</button>
                     </div>
-                    <div className='w-full max-w-[440px] bg-gradient-to-b from-purple-600/10 to-transparent backdrop-blur-sm border border-gray-700 shadow-lg flex flex-col rounded-xl my-8 md:my-0 p-4 sm:p-6 hover:scale-105 duration-300 relative overflow-hidden hover:border-purple-600'>
-                        <div className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 to-purple-400'></div>
-                        <div className='absolute top-6 right-6 bg-gradient-to-r from-purple-600 to-purple-400 text-white text-xs px-3 py-1 rounded-full'>Premium</div>
-                        <img className='w-12 h-12 sm:w-16 sm:h-16 mx-auto mt-2 rounded-full bg-gradient-to-r from-purple-600 to-purple-400 p-3' src={Triple} alt="/" />
-                        <h2 className='text-3xl sm:text-4xl font-bold text-white text-center py-4 sm:py-6'>Pro Plan</h2>
-                        <div className='text-left my-4 sm:my-6 font-medium text-gray-300'>
-                            <p className='py-2 items-center mx-4 sm:mx-8 flex border-t border-gray-700/50'><Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mx-2" />Auto-save screenshot as evidence of harassment</p>
-                            <p className='py-2 items-center mx-4 sm:mx-8 flex'><Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mx-2" />Access to view Top hidden users with most tags</p>
-                            <p className='py-2 items-center mx-4 sm:mx-8 flex'><Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mx-2" />Priority support and more tag value</p>
-                            <p className='py-2 items-center mx-4 sm:mx-8 flex border-b border-gray-700/50'><Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mx-2" />More storage & extended message history</p>
-                        </div>
-                        <div className='w-full max-w-[350px] mx-auto grid text-white md:grid-cols-2 gap-4 sm:gap-6'>
-                            <div className='border bg-gradient-to-r from-purple-600 to-purple-400 border-gray-700 shadow-lg flex flex-col rounded-xl my-4 text-center md:my-0 p-3'>
-                                <div className=''>
-                                    <p className='text-sm sm:text-md'>Monthly Plan</p>
-                                    <p className='text-2xl sm:text-3xl font-bold'>2$</p>
-                                </div>
-                                <div className=''>
-                                    <p className='text-sm sm:text-md mt-3'>(Early bird)</p>
-                                    <p className='text-2xl sm:text-3xl font-bold'>1$</p>
+
+                    {/* Premium Plan Card */}
+                    <div className="w-full max-w-md transition-transform duration-300 hover:scale-105" style={{
+                        borderRadius: '20.355px',
+                        border: '1px solid #7647B8',
+                        background: 'linear-gradient(151deg, #5F4E9C -8.14%, #392E65 24.97%, #2A204C 48.88%, #392E65 73.54%, #5F4E9C 106.62%)',
+                        boxShadow: '0px 3.257px 19.541px -0.814px rgba(0, 0, 0, 0.20)',
+                        backdropFilter: 'blur(16.284381866455078px)'
+                    }}>
+                        <div className="h-full rounded-3xl py-8 px-4 flex flex-col">
+                            <div className="text-center mb-8">
+                                <h2 className="text-3xl font-bold text-white mb-2 flex items-center justify-center">
+                                    Premium Plan <Crown className="ml-2 h-5 w-5 text-yellow-400" />
+                                </h2>
+                                <p className="text-gray-400 font-[futura]">Advanced protection for high-risk users (women and influencers)</p>
+                            </div>
+
+                            <div className="text-center mb-8">
+                                <div className="flex justify-center items-baseline">
+                                    <span className="text-6xl font-bold text-white">$2</span>
+                                    <span className="ml-2 font-[futura] text-gray-400">per month</span>
                                 </div>
                             </div>
-                            <div className='border bg-gradient-to-r from-purple-600 to-purple-400 border-gray-700 shadow-lg flex flex-col rounded-xl my-4 text-center md:my-0 p-3'>
-                                <div className='py-3'>
-                                    <p className='text-sm sm:text-md'>Annual Plan</p>
-                                    <p className='text-2xl sm:text-3xl font-bold'>12$</p>
+
+                            <div className="p-4 mb-8 text-center">
+                                <button className="w-full py-4 font-[futura] bg-black  font-medium text-lg text-white transition-transform duration-200 hover:scale-95 active:scale-90" style={{
+                                    borderRadius: '8px',
+                                    boxShadow: '0px 4px 6.8px 0px rgba(0, 0, 0, 0.25)'
+                                }}>
+                                    Upgrade plan
+                                </button>
+                            </div>
+
+                            <div className="flex-1 space-y-2 ml-6 font-[futura]">
+                                <div className="flex items-start">
+                                    <span className="text-yellow-400 mr-2 mt-1">✓</span>
+                                    <span className="text-white">Auto-save screenshot as evidence</span>
                                 </div>
-                                <div>
-                                    <p className='bg-white text-purple-600 mt-6 sm:mt-8'>Get 50% OFF</p>
+                                <div className="flex items-start">
+                                    <span className="text-yellow-400 mr-2 mt-1">✓</span>
+                                    <span className="text-white">Access to view Top most hidden users</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <span className="text-yellow-400 mr-2 mt-1">✓</span>
+                                    <span className="text-white">Priority support and more tag value</span>
+                                </div>
+                                <div className="flex items-start">
+                                    <span className="text-yellow-400 mr-2 mt-1">✓</span>
+                                    <span className="text-white">Extended message storage history</span>
                                 </div>
                             </div>
                         </div>
-                        <button className='bg-white mx-auto w-full sm:w-[200px] px-6 py-3 my-6 rounded-lg text-purple-600 font-semibold hover:opacity-90 transition-all'>Get Premium</button>
                     </div>
                 </div>
             </div>

@@ -32,25 +32,25 @@ const Terms = () => {
                 backdropFilter: 'blur(20px)'
               }}>
                 <div className="mb-12">
-                    <h1 className="text-5xl font-bold text-white mb-2">Terms of Use</h1>
-                    <p className="text-gray-400">Effective Date: February 9, 2024</p>
+                    <h1 className="font-[URW-bold] text-5xl font-bold text-white mb-2">Terms of Use</h1>
+                    <p className=" font-[futura] text-gray-400">Effective Date: February 9, 2024</p>
                 </div>
 
                 <div className="prose prose-lg max-w-none">
-                    <p className="text-white text-md mb-16">
+                    <p className=" font-[futura] text-white text-md mb-16">
                         Your use of Safire is governed by the terms and conditions herein.
                         Please read these terms carefully before proceeding.
                     </p>
 
-                    <h2 className="text-3xl font-bold text-purple-700 mt-8 pb-3 mb-6 border-b border-gray-700">About Safire</h2>
-                    <p className="text-white text-md mb-16">
+                    <h2 className="text-3xl font-[URW-bold] font-bold text-purple-700 mt-8 pb-3 mb-6 border-b border-gray-700">About Safire</h2>
+                    <p className="font-[futura] text-white text-md mb-16">
                         Safire is designed to help users document and manage unwanted
                         interactions on LinkedIn. Our primary focus is user privacy and security while providing
                         effective documentation and reporting tools.
                     </p>
 
-                    <h2 className="text-3xl font-bold text-purple-700 mt-8 pb-3 mb-6 border-b border-gray-700">Data Privacy & Security</h2>
-                    <div className="space-y-4 text-white text-md mb-16">
+                    <h2 className="text-3xl font-[URW-bold] font-bold text-purple-700 mt-8 pb-3 mb-6 border-b border-gray-700">Data Privacy & Security</h2>
+                    <div className="space-y-4 font-[futura] text-white text-md mb-16">
                         <p>
                             <strong className="text-white">Message Storage: </strong> We only save messages that
                             are detected as harassment or abuse. Your regular conversations and other messages
@@ -64,7 +64,7 @@ const Terms = () => {
                     </div>
 
                     <div className="mt-12 p-4 bg-gray-50 rounded-lg">
-                        <p className="text-md text-gray-600">
+                        <p className="text-md font-[futura] text-gray-600">
                             For any questions about these terms or our privacy practices, please contact
                             our support team.
                         </p>
