@@ -52,7 +52,7 @@ const Hero = () => {
                         </div>
                     </h1>
                     
-                    <div className="flex justify-center items-center px-4 sm:px-6 md:px-8">
+                    <div className="flex justify-center items-center px-4 sm:px-6 md:px-8 pt-12 sm:pt-0">
                         <p className="font-[futura] bg-clip-text text-transparent text-lg sm:text-xl md:text-2xl font-URW mb-5" style={{
                             backgroundImage:
                             'linear-gradient(89deg, #815CF2 0.62%, #C2A6E8 16.57%, #FFF 52.45%, #C2A6E8 88.67%, #815CF2 97.4%)',
@@ -74,7 +74,7 @@ const Hero = () => {
                     <FaChrome size={25}/>Install Web Extension
                     </button>
                     <div className=" mt-6 sm:mt-8 md:mt-10">
-                        <img className="w-16 mt-20 sm:mt-8 md:mt-10 sm:w-20 md:w-24" src={Circle} alt="/" />
+                        <img className="w-16 mt-8 sm:mt-8 md:mt-10 sm:w-20 md:w-24" src={Circle} alt="/" />
                     </div>
                 </div>
                 <div className="absolute top-[40%] left-0 right-0 z-0 hidden lg:block">
