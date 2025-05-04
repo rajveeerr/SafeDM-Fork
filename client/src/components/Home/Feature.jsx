@@ -59,15 +59,15 @@ const Feature = () => {
 
 
         <div className="max-w-[1040px] mx-auto grid py-6 sm:py-8 md:py-10 text-white md:grid-cols-2 gap-8">
-          <img className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto my-4" src={One} alt="/" />
-          <div className="m-auto flex flex-col px-4 md:ml-20 justify-center">
+          <img className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mx-auto my-4 order-2 md:order-1" src={One} alt="/" />
+          <div className="m-auto flex flex-col px-4 md:ml-20 justify-center order-1 md:order-2">
             <h1 className="font-[URW-bold] text-3xl sm:text-4xl md:text-5xl font-bold py-4 sm:py-6 md:py-10">1. Hide Inappropriate Messages</h1>
             <p className="font-[futura] text-sm sm:text-base">Harassing messages are hidden from the user while remaining stored for evidence. The harasser remains unaware, reducing the risk of retaliation and protecting the user from distress.</p>
           </div>
         </div>
 
         <div className="max-w-[1040px] mx-auto py-6 sm:py-8 md:py-10 grid text-white md:grid-cols-2 gap-8">
-          <div className="m-auto flex flex-col px-4 md:ml-20 justify-center">
+          <div className="m-auto flex flex-col px-4 md:ml-20 justify-center ">
             <h1 className="font-[URW-bold] text-3xl sm:text-4xl md:text-5xl font-bold py-2 sm:py-6 md:pb-10 md:pt-0">2. Hide User</h1>
             <p className="font-[futura] text-sm sm:text-base">Harassers believe their messages are delivered, but they never appear in the recipient’s inbox or DMs. This prevents further escalation as harassers could use multiple id's if blocked directly.</p>
           </div>
@@ -75,15 +75,15 @@ const Feature = () => {
         </div>
 
         <div className="max-w-[1040px] mx-auto py-6 sm:py-8 md:py-10 grid text-white md:grid-cols-2 gap-8">
-          <img className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[400px] mx-auto my-4" src={Two} alt="/" />
-          <div className="m-auto flex flex-col px-4 md:ml-20 justify-center order-2 md:order-1">
+          <img className="w-full max-w-[250px] sm:max-w-[300px] md:max-w-[400px] mx-auto my-4 order-2 md:order-1" src={Two} alt="/" />
+          <div className="m-auto flex flex-col px-4 md:ml-20 justify-center order-1 md:order-2">
             <h1 className="font-[URW-bold] text-3xl sm:text-4xl md:text-5xl font-bold py-4 sm:py-6 md:py-10">3. Tag Harassers</h1>
             <p className="font-[futura] text-sm sm:text-base">Allows users to tag and track harassers, making it easier to identify repeat offenders. This feature helps in better reporting and taking action against persistent abuse.</p>
           </div>
         </div>
 
         <div className="max-w-[1040px] mx-auto py-6 sm:py-8 md:py-10 grid text-white md:grid-cols-2 gap-8">
-          <div className="m-auto flex flex-col px-4 md:ml-20 justify-center order-2 md:order-1">
+          <div className="m-auto flex flex-col px-4 md:ml-20 justify-center  ">
             <h1 className="font-[URW-bold] text-3xl sm:text-4xl md:text-5xl font-bold py-4 sm:py-6 md:py-10">4. Generate Reports</h1>
             <p className="font-[futura] text-sm sm:text-base">Generates ready-to-send reports containing all necessary evidence, including screenshots and timestamps. These reports are formatted for submission to law enforcement or platform moderators.</p>
           </div>
