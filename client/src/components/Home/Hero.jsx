@@ -25,7 +25,7 @@ const Hero = () => {
                       zIndex: 0
                     }}
                   />
-            <div className="relative h-screen overflow-hidden z-0">
+            <div className="relative lg:h-screen h-[70vh] overflow-hidden z-0">
                 
                 <div className="absolute w-full flex flex-col mt-15 justify-center items-center z-5 text-center pointer-events-none">
                     
