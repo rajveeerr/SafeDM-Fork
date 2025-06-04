@@ -5,7 +5,7 @@ import {
     FaGithubSquare,
     FaInstagram
 } from 'react-icons/fa'
-import Safire from "/src/assets/Safire.png"
+import Safire from "/src/assets/Safire.svg"
 
 const Footer = () => {
     return (

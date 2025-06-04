@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import Safire from "/src/assets/Safire.png"
+import Safire from "/src/assets/Safire.svg"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
