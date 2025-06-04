@@ -32,7 +32,7 @@ const Hero = () => {
                     <h1 className="font-[URW-bold] text-5xl sm:text-4xl md:text-6xl lg:text-7xl pt-10 sm:pt-10 md:py-6 lg:py-7 text-white font-bold">
                         Stay Safe Online,{' '}
                         <div className="relative inline-block">
-                            <span className="font-[URW-bold-italic] text-transparent bg-gradient-to-r from-purple-600 via-purple-300 to-purple-600 bg-clip-text">
+                            <span className="font-[URW-bold-italic] text-transparent bg-gradient-to-r from-[#6E5DCD] via-purple-300 to-[#6E5DCD] bg-clip-text">
                                 Hassle-Free.
                             </span>
                             <svg
@@ -70,7 +70,7 @@ const Hero = () => {
                             />
                         </p>
                     </div>
-                    <button className="bg-purple-600 font-[futura] transition-transform duration-200 hover:scale-95 active:scale-90 mx-auto w-[200px] gap-2 sm:w-[250px] justify-center flex items-center py-2 sm:py-3 my-4 sm:my-5 md:my-5 rounded-3xl text-white font-bold pointer-events-auto text-sm sm:text-base md:text-lg">
+                    <button className="bg-[#6E5DCD] font-[futura] transition-transform duration-200 hover:scale-95 active:scale-90 mx-auto w-[200px] gap-2 sm:w-[250px] justify-center flex items-center py-2 sm:py-3 my-4 sm:my-5 md:my-5 rounded-3xl text-white font-bold pointer-events-auto text-sm sm:text-base md:text-lg">
                     <FaChrome size={25}/>Install Web Extension
                     </button>
                     <div className=" mt-6 sm:mt-8 md:mt-10">

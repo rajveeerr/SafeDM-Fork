@@ -27,12 +27,12 @@ const Feature = () => {
         <div className="max-w-[700px] mx-auto text-center mb-8 sm:mb-16 md:mb-24 lg:mb-30 px-4">
           <h1 className="text-3xl font-[URW-bold] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white my-6 sm:my-8 md:my-10">
             Advanced{' '}
-            <span className="text-transparent font-[URW-bold-italic] bg-gradient-to-r from-purple-600 via-purple-300 to-purple-600 bg-clip-text">
+            <span className="text-transparent font-[URW-bold-italic] bg-gradient-to-r from-[#6E5DCD] via-purple-300 to-[#6E5DCD] bg-clip-text">
               functionality.
             </span>{' '}
             Flawless{' '}
             <div className="relative inline-block">
-              <span className="text-transparent font-[URW-bold-italic] bg-gradient-to-r from-purple-600 via-purple-200 to-purple-600 bg-clip-text">
+              <span className="text-transparent font-[URW-bold-italic] bg-gradient-to-r from-[#6E5DCD] via-purple-200 to-[#6E5DCD] bg-clip-text">
                 integration
               </span>
               <svg
@@ -96,7 +96,7 @@ const Feature = () => {
           backdropFilter: 'blur(20px)'
         }}>
           <span>Product is still in</span>
-          <span className="mx-2 bg-purple-600 text-white px-3 py-1.5 rounded-full">
+          <span className="mx-2 bg-[#6E5DCD] text-white px-3 py-1.5 rounded-full">
             Testing
           </span>
           <span>phase.</span>

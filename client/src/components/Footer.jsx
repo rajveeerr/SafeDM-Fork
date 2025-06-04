@@ -11,7 +11,7 @@ const Footer = () => {
     return (
       <footer className="w-full px-8 py-6" style={{
         borderRadius: '35px 35px 0px 0px',
-        border: '1px solid #7210FA',
+        border: '1px solid #6E5DCD',
         background: 'linear-gradient(0deg, #241E41 0%, #0F0F15 109.33%)',
         boxShadow: '0px 4px 24px -1px rgba(0, 0, 0, 0.20)',
         backdropFilter: 'blur(20px)'
@@ -30,7 +30,7 @@ const Footer = () => {
   
           
           <div className="flex flex-col gap-4">
-            <h3 className="text-purple-600 font-semibold">Explore</h3>
+            <h3 className="text-[#6E5DCD] font-semibold">Explore</h3>
             <ul className="flex flex-col gap-2">
               <li><a href="/" className="text-gray-300 hover:text-purple-500">Home</a></li>
               <li><a href="/how-it-works" className="text-gray-300 hover:text-purple-500">Demo</a></li>
@@ -42,17 +42,17 @@ const Footer = () => {
   
           
           <div className="flex flex-col gap-4">
-            <h3 className="text-purple-600 font-semibold">Resources</h3>
+            <h3 className="text-[#6E5DCD] font-semibold">Resources</h3>
             <ul className="flex flex-col gap-2">
-              <li><a href="https://github.com/divyansharma001/Harrashment-Saver-Project1" className="text-gray-300 hover:text-purple-600">Github</a></li>
-              <li><a href="https://linkedin.com" className="text-gray-300 hover:text-purple-600">Help</a></li>
+              <li><a href="https://github.com/divyansharma001/Harrashment-Saver-Project1" className="text-gray-300 hover:text-[#6E5DCD]">Github</a></li>
+              <li><a href="https://linkedin.com" className="text-gray-300 hover:text-[#6E5DCD]">Help</a></li>
               
             </ul>
           </div>
   
           
           <div className="flex flex-col gap-4">
-            <h3 className="text-purple-500 font-semibold">Links</h3>
+            <h3 className="text-[#6E5DCD] font-semibold">Links</h3>
             <ul className="flex flex-col text-gray-300 gap-2">
               <li><a href="https://github.com/divyansharma001/Harrashment-Saver-Project1"><FaGithubSquare size={30}/></a></li>
             </ul>

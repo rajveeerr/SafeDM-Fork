@@ -27,12 +27,12 @@ const Pricing = () => {
                 <div className="max-w-[700px] mx-auto text-center mb-4 sm:mb-10 md:mb-14 lg:mb-20 px-4">
                     <h1 className="text-3xl font-[URW-bold] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white my-6 sm:my-8 md:my-10">
                         Experience{' '}
-                        <span className="text-transparent font-[URW-bold-italic] bg-gradient-to-r from-purple-600 via-purple-300 to-purple-600 bg-clip-text">
+                        <span className="text-transparent font-[URW-bold-italic] bg-gradient-to-r from-[#6E5DCD] via-purple-300 to-[#6E5DCD] bg-clip-text">
                             Premium
                         </span>{' '}
                         Safety{' '}
                         <div className="relative inline-block">
-                            <span className="text-transparent font-[URW-bold-italic] bg-gradient-to-r from-purple-600 via-purple-200 to-purple-600 bg-clip-text">
+                            <span className="text-transparent font-[URW-bold-italic] bg-gradient-to-r from-[#6E5DCD] via-purple-200 to-[#6E5DCD] bg-clip-text">
                                 Features.
                             </span>
                             <svg
