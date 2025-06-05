@@ -23,7 +23,7 @@ const Pricing = () => {
                     zIndex: 0
                 }}
             />
-            <div className='relative z-10 w-full'>
+            <div className='relative z-10 w'>
                 <div className="max-w-[700px] mx-auto text-center mb-4 sm:mb-10 md:mb-14 lg:mb-20 px-4">
                     <h1 className="text-3xl font-[URW-bold] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white my-6 sm:my-8 md:my-10">
                         Experience{' '}
